@@ -5,8 +5,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.math.BigDecimal;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SampleTest {
     final private String url = "https://www.webstaurantstore.com/";
@@ -15,10 +18,19 @@ public class SampleTest {
 
     @BeforeEach
     public void setup() {
-        var driver = WebDriverManager.chromedriver().create();
+        var chromeOptions = new ChromeOptions();
+        var headlessEnVar = System.getProperty("use.headless");
+
+        if (headlessEnVar != null && headlessEnVar.equalsIgnoreCase("true")) {
+            chromeOptions.addArguments("--headless=new");
+        }
+
+        var driver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
         webDriver.set(driver);
         webDriver.get().manage().window().maximize();
+
         actions.set(new TestActions(webDriver.get()));
+
         webDriver.get().get(url);
     }
 

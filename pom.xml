@@ -33,9 +33,32 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>standard</id>
+            <properties>
+                <profile.use.headless>false</profile.use.headless>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>headless</id>
+            <properties>
+                <profile.use.headless>true</profile.use.headless>
+            </properties>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.2</version>
                 <configuration>
@@ -46,6 +69,9 @@
                             junit.jupiter.execution.parallel.config.fixed.parallelism=2
                         </configurationParameters>
                     </properties>
+                    <systemPropertyVariables>
+                        <use.headless>${profile.use.headless}</use.headless>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
