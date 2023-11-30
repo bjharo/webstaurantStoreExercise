@@ -9,8 +9,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 public class SampleTest {
     final private String url = "https://www.webstaurantstore.com/";
     final private ThreadLocal<WebDriver> webDriver = new ThreadLocal<>();
