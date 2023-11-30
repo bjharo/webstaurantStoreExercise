@@ -35,7 +35,7 @@ public class TestActions {
         var productListPage = new ProductListPage(webDriver);
         var availableItems = productListPage.getAvailableProducts();
 
-        assertNotEquals(0, availableItems, "There are no items on the page that are available to " +
+        assertNotEquals(0, availableItems.size(), "There are no items on the page that are available to " +
                 "add to a cart.");
 
         return availableItems.get(availableItems.size() - 1);
