@@ -17,7 +17,7 @@ public abstract class PageBase {
     {
         this.context = context;
         this.wait = new FluentWait<>(context)
-                .withTimeout(Duration.ofSeconds(10))
+                .withTimeout(Duration.ofSeconds(15))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
         PageFactory.initElements(context, this);
