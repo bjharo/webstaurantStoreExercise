@@ -1,10 +1,10 @@
-package pageObjects.pages;
+package pageobjects.pages;
 
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageObjects.widgets.CartItemWidget;
-import pageObjects.PageBase;
+import pageobjects.widgets.CartItemWidget;
+import pageobjects.PageBase;
 
 import java.util.ArrayList;
 import java.util.List;

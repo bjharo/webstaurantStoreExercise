@@ -1,9 +1,9 @@
-package pageObjects.pages;
+package pageobjects.pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-import pageObjects.PageBase;
-import pageObjects.widgets.ProductWidget;
+import pageobjects.PageBase;
+import pageobjects.widgets.ProductWidget;
 
 import java.util.ArrayList;
 import java.util.List;

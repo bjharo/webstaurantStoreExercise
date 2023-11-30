@@ -1,4 +1,4 @@
-package pageObjects;
+package pageobjects;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.SearchContext;

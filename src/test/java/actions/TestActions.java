@@ -1,12 +1,12 @@
 package actions;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.modals.EmptyCartModal;
-import pageObjects.pages.CartPage;
-import pageObjects.pages.ProductListPage;
-import pageObjects.widgets.AddedToCartToastWidget;
-import pageObjects.widgets.HeaderRowWidget;
-import pageObjects.widgets.ProductWidget;
+import pageobjects.modals.EmptyCartModal;
+import pageobjects.pages.CartPage;
+import pageobjects.pages.ProductListPage;
+import pageobjects.widgets.AddedToCartToastWidget;
+import pageobjects.widgets.HeaderRowWidget;
+import pageobjects.widgets.ProductWidget;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;

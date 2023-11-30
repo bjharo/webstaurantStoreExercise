@@ -1,8 +1,8 @@
-package pageObjects.modals;
+package pageobjects.modals;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-import pageObjects.PageBase;
+import pageobjects.PageBase;
 
 public class EmptyCartModal extends PageBase {
     @FindBy(css="ddiv[role = 'alertdialog']")

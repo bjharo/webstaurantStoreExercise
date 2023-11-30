@@ -1,10 +1,10 @@
-package pageObjects.widgets;
+package pageobjects.widgets;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageObjects.PageBase;
+import pageobjects.PageBase;
 
 public class ProductWidget extends PageBase {
 
